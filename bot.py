@@ -21,9 +21,9 @@ async def start_bot():
 
     await app.run_webhook(
         listen="0.0.0.0",
-        port=8000
+        port=8000,
+        webhook_path=f"/webhook/{WEBHOOK_SECRET_KEY}"
     )
 
 if __name__ == "__main__":
-    nest_asyncio.apply()
-    asyncio.get_event_loop().run_until_complete(start_bot())
+    asyncio.run(start_bot())
