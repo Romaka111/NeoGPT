@@ -5,8 +5,8 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 import nest_asyncio
 
 BOT_TOKEN = "7584731929:AAEV05mjsHb_7wl6eqkDwP1yfQ09o2ciklI"
-BASE_URL = "https://web-production-6325f.up.railway.app"
-WEBHOOK_SECRET_KEY = "supersecret"
+BASE_URL = os.environ.get("BASE_URL","https://web-production-6325f.up.railway.app")
+WEBHOOK_SECRET_KEY = os.environ.get("WEBHOOK_SECRET_KEY","supersecret")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Привет! Это NeoGPT, я запущен на Webhook с защитой!")
