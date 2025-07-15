@@ -4,7 +4,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 import nest_asyncio
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = "7584731929:AAEV05mjsHb_7wl6eqkDwP1yfQ09o2ciklI"
 BASE_URL = os.getenv("BASE_URL")
 WEBHOOK_SECRET_KEY = os.getenv("WEBHOOK_SECRET_KEY")
 
