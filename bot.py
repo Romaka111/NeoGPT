@@ -21,9 +21,7 @@ async def start_bot():
 
     await app.run_webhook(
         listen="0.0.0.0",
-        port=8000,
-        webhook_path=f"/webhook/{BOT_TOKEN}",
-        secret_token=WEBHOOK_SECRET_KEY,
+        port=8000
     )
 
 if __name__ == "__main__":
